@@ -5,13 +5,13 @@
 ### Paths #################################################
 
 # Point to the path of your applications code on your host
-APP_CODE_PATH_HOST=../
+APP_CODE_PATH_HOST=/www
 
 # Point to where the `APP_CODE_PATH_HOST` should be in the container. You may add flags to the path `:cached`, `:delegated`. When using Docker Sync add `:nocopy`
 APP_CODE_PATH_CONTAINER=/var/www:cached
 
 # Choose storage path on your machine. For all storage systems
-DATA_PATH_HOST=/vagrant/data
+DATA_PATH_HOST=~/.laradock/data
 
 ### Drivers ################################################
 
@@ -157,8 +157,8 @@ PHP_WORKER_INSTALL_PGSQL=false
 
 NGINX_HOST_HTTP_PORT=80
 NGINX_HOST_HTTPS_PORT=443
-NGINX_HOST_LOG_PATH=/vagrant/logs/nginx
-NGINX_SITES_PATH=/vagrant/config/nginx/sites
+NGINX_HOST_LOG_PATH=./logs/nginx/
+NGINX_SITES_PATH=./nginx/sites/
 NGINX_PHP_UPSTREAM_CONTAINER=php-fpm
 NGINX_PHP_UPSTREAM_PORT=9000
 
@@ -166,8 +166,8 @@ NGINX_PHP_UPSTREAM_PORT=9000
 
 APACHE_HOST_HTTP_PORT=80
 APACHE_HOST_HTTPS_PORT=443
-APACHE_HOST_LOG_PATH=/vagrant/logs/apache2
-APACHE_SITES_PATH=/vagrant/apache2/sites
+APACHE_HOST_LOG_PATH=./logs/apache2
+APACHE_SITES_PATH=./apache2/sites
 APACHE_PHP_UPSTREAM_CONTAINER=php-fpm
 APACHE_PHP_UPSTREAM_PORT=9000
 APACHE_PHP_UPSTREAM_TIMEOUT=60
